@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrated Code Example</title>
+  <style>
+    /* CSS */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #b2bc9d;
+    }
+
+    .quiz-container {
+      background: #a3ff9b;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>What is 5 + 3?</h2>
+    <button onclick="checkAnswer(7)">7</button>
+    <button onclick="checkAnswer(8)">8</button>
+    <button onclick="checkAnswer(9)">9</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    // JavaScript
+    function checkAnswer(answer) {
+      const result = document.getElementById('result');
+      if (answer === 8) {
+        result.textContent = 'Correct! 🎉';
+        result.style.color = 'green';
+      } else {
+        result.textContent = 'Try again! ❌';
+        result.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>
